@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mycolle_app/controllers/counter_coutroller.dart';
 
 
-class CounterDetailsPage extends StatelessWidget {
+class CounterDetailsPage extends ConsumerWidget {
   // ._() でコンストラクタを定義すると気軽に外部から呼べなくなる
   const CounterDetailsPage._(this.index);
   final int index;
@@ -35,7 +35,7 @@ class CounterDetailsPage extends StatelessWidget {
       /// 部分的に Consumer を使うことで、この部分しかリビルドされず
       /// パフォーマンスが向上します。
       body: Consumer(
-        builder: (_, watch, __) {
+        builder: (_, watch, __,) {
           final count = ref.watch(counterProvider(index)).count;
           return Center(
             child: Text('$count', style: textTheme.headline5),

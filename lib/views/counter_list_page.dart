@@ -5,7 +5,7 @@ import 'package:mycolle_app/controllers/counter_coutroller.dart';
 import 'counter_details_page.dart';
 
 
-class CounterListPage extends StatelessWidget {
+class CounterListPage extends ConsumerWidget {
   // ._() でコンストラクタを定義すると気軽に外部から呼べなくなる
   const CounterListPage._();
 

@@ -6,7 +6,10 @@ import 'views/counter_list_page.dart';
 
 
 void main() {
-  const ProviderScope(child: MyApp());
+  runApp(
+    // ProviderScope で囲む必要がある
+    const ProviderScope(child: MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {
